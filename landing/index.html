@@ -12,11 +12,196 @@
 </head>
 <body>
 
+<!-- =====================================================
+     SVG SPRITE LIBRARY — all icons defined once here
+     ===================================================== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <!-- flame -->
+  <symbol id="ic-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+  </symbol>
+
+  <!-- lock -->
+  <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+  </symbol>
+
+  <!-- clock -->
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </symbol>
+
+  <!-- trending-up (community/market) -->
+  <symbol id="ic-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+  </symbol>
+
+  <!-- shield -->
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+
+  <!-- zap -->
+  <symbol id="ic-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+
+  <!-- trending-down -->
+  <symbol id="ic-trending-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/>
+  </symbol>
+
+  <!-- bar-chart -->
+  <symbol id="ic-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/>
+  </symbol>
+
+  <!-- coins / dollar -->
+  <symbol id="ic-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1110.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/>
+  </symbol>
+
+  <!-- wallet -->
+  <symbol id="ic-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4z"/>
+  </symbol>
+
+  <!-- skull -->
+  <symbol id="ic-skull" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/>
+    <path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/>
+    <path d="M16 20a2 2 0 002-2v-2a6 6 0 10-12 0v2a2 2 0 002 2"/>
+  </symbol>
+
+  <!-- gift -->
+  <symbol id="ic-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7"/>
+    <line x1="12" x2="12" y1="22" y2="7"/>
+    <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+  </symbol>
+
+  <!-- trophy -->
+  <symbol id="ic-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/>
+    <path d="M7 4H17v8a5 5 0 01-10 0V4z"/>
+    <path d="M7 9H2v1a5 5 0 005 5"/><path d="M17 9h5v1a5 5 0 01-5 5"/>
+  </symbol>
+
+  <!-- megaphone -->
+  <symbol id="ic-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+  </symbol>
+
+  <!-- vote / check-square -->
+  <symbol id="ic-vote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+  </symbol>
+
+  <!-- calendar -->
+  <symbol id="ic-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+  </symbol>
+
+  <!-- timer -->
+  <symbol id="ic-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/>
+    <circle cx="12" cy="14" r="8"/>
+  </symbol>
+
+  <!-- rocket -->
+  <symbol id="ic-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/>
+    <path d="m12 15-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/>
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+  </symbol>
+
+  <!-- check-circle -->
+  <symbol id="ic-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+  </symbol>
+
+  <!-- circle (pending) -->
+  <symbol id="ic-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+  </symbol>
+
+  <!-- loader / spinner -->
+  <symbol id="ic-loader" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" x2="12" y1="2" y2="6"/><line x1="12" x2="12" y1="18" y2="22"/>
+    <line x1="4.93" x2="7.76" y1="4.93" y2="7.76"/><line x1="16.24" x2="19.07" y1="16.24" y2="19.07"/>
+    <line x1="2" x2="6" y1="12" y2="12"/><line x1="18" x2="22" y1="12" y2="12"/>
+    <line x1="4.93" x2="7.76" y1="19.07" y2="16.24"/><line x1="16.24" x2="19.07" y1="7.76" y2="4.93"/>
+  </symbol>
+
+  <!-- alert-triangle -->
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+    <line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/>
+  </symbol>
+
+  <!-- message-circle -->
+  <symbol id="ic-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+  </symbol>
+
+  <!-- mail -->
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+  </symbol>
+
+  <!-- Twitter/X -->
+  <symbol id="ic-twitter" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </symbol>
+
+  <!-- Telegram (paper plane) -->
+  <symbol id="ic-telegram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+  </symbol>
+
+  <!-- Discord -->
+  <symbol id="ic-discord" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+  </symbol>
+
+  <!-- GitHub -->
+  <symbol id="ic-github" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+  </symbol>
+
+  <!-- external-link -->
+  <symbol id="ic-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/>
+  </symbol>
+
+  <!-- sparkles (doll logo) -->
+  <symbol id="ic-doll" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="12" r="7" stroke="currentColor" stroke-width="2"/>
+    <circle cx="13" cy="11" r="1.2" fill="currentColor"/>
+    <circle cx="19" cy="11" r="1.2" fill="currentColor"/>
+    <path d="M13 14.5 Q16 17 19 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="11.5" cy="13.5" rx="1.5" ry=".8" fill="currentColor" opacity=".3"/>
+    <ellipse cx="20.5" cy="13.5" rx="1.5" ry=".8" fill="currentColor" opacity=".3"/>
+    <path d="M10 19 Q16 22 22 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="16" y1="19" x2="16" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="9" y1="22" x2="16" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="23" y1="22" x2="16" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="13" y1="28" x2="16" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="19" y1="28" x2="16" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 5 Q16 2 18 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </symbol>
+
+</svg>
+<!-- END SPRITE LIBRARY -->
+
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#home" class="logo">
-      <span class="logo-doll">🪆</span>
+      <span class="logo-doll">
+        <svg width="28" height="28"><use href="#ic-doll"/></svg>
+      </span>
       <span class="logo-text">BabyDoll</span>
       <span class="logo-ticker">$BDOLL</span>
     </a>
@@ -27,7 +212,9 @@
       <li><a href="#presale">Pre-Sale</a></li>
       <li><a href="#roadmap">Roadmap</a></li>
     </ul>
-    <a href="#presale" class="btn btn-nav">🔥 Get $BDOLL</a>
+    <a href="#presale" class="btn btn-nav">
+      <svg width="14" height="14"><use href="#ic-flame"/></svg> Get $BDOLL
+    </a>
   </div>
 </nav>
 
@@ -38,15 +225,23 @@
   <div class="hero-glow g2"></div>
   <div class="hero-glow g3"></div>
 
-  <div class="floating-bits">
-    <span class="bit b1">🪆</span><span class="bit b2">🔥</span>
-    <span class="bit b3">💀</span><span class="bit b4">🎀</span>
-    <span class="bit b5">💎</span><span class="bit b6">🌸</span>
-    <span class="bit b7">⚡</span><span class="bit b8">🫧</span>
+  <!-- Floating geometric shapes replacing emoji bits -->
+  <div class="floating-bits" aria-hidden="true">
+    <span class="bit b1"><svg width="32" height="32" viewBox="0 0 32 32"><use href="#ic-doll"/></svg></span>
+    <span class="bit b2"><svg width="28" height="28"><use href="#ic-flame"/></svg></span>
+    <span class="bit b3"><svg width="26" height="26"><use href="#ic-skull"/></svg></span>
+    <span class="bit b4"><svg width="30" height="30"><use href="#ic-zap"/></svg></span>
+    <span class="bit b5"><svg width="26" height="26"><use href="#ic-coins"/></svg></span>
+    <span class="bit b6"><svg width="28" height="28"><use href="#ic-shield"/></svg></span>
+    <span class="bit b7"><svg width="24" height="24"><use href="#ic-lock"/></svg></span>
+    <span class="bit b8"><svg width="26" height="26"><use href="#ic-trending-up"/></svg></span>
   </div>
 
   <div class="hero-content">
-    <div class="hero-tag">🔥 She Burns. She Grows. She Wins.</div>
+    <div class="hero-tag">
+      <svg width="14" height="14" class="ic-inline"><use href="#ic-flame"/></svg>
+      She Burns. She Grows. She Wins.
+    </div>
 
     <div class="mascot-wrap">
       <div class="mascot">
@@ -61,7 +256,6 @@
           </div>
           <div class="doll-mouth"></div>
         </div>
-        <div class="mascot-glow"></div>
         <div class="mascot-ring r1"></div>
         <div class="mascot-ring r2"></div>
       </div>
@@ -80,16 +274,22 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#presale" class="btn btn-primary">🚀 Join the Pre-Sale — $100</a>
-      <a href="#burn" class="btn btn-ghost">🔥 How Burning Works</a>
+      <a href="#presale" class="btn btn-primary">
+        <svg width="16" height="16"><use href="#ic-rocket"/></svg>
+        Join the Pre-Sale — $100
+      </a>
+      <a href="#burn" class="btn btn-ghost">
+        <svg width="16" height="16"><use href="#ic-flame"/></svg>
+        How Burning Works
+      </a>
     </div>
 
     <div class="hero-pills">
-      <span class="pill">✅ ERC-20 Ethereum</span>
-      <span class="pill">✅ OpenZeppelin Audited</span>
-      <span class="pill">✅ 10B Hard Cap</span>
-      <span class="pill">✅ Deflationary Burn</span>
-      <span class="pill">✅ Gasless Approvals</span>
+      <span class="pill"><svg width="12" height="12" class="pill-ic"><use href="#ic-check-circle"/></svg> ERC-20 Ethereum</span>
+      <span class="pill"><svg width="12" height="12" class="pill-ic"><use href="#ic-check-circle"/></svg> OpenZeppelin Audited</span>
+      <span class="pill"><svg width="12" height="12" class="pill-ic"><use href="#ic-check-circle"/></svg> 10B Hard Cap</span>
+      <span class="pill"><svg width="12" height="12" class="pill-ic"><use href="#ic-check-circle"/></svg> Deflationary Burn</span>
+      <span class="pill"><svg width="12" height="12" class="pill-ic"><use href="#ic-check-circle"/></svg> Gasless Approvals</span>
     </div>
   </div>
 </section>
@@ -97,14 +297,23 @@
 <!-- ===== TICKER ===== -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track">
-    <span>🪆 $BDOLL</span><span>🔥 BURN TO EARN SCARCITY</span>
-    <span>💎 10B MAX SUPPLY — FOREVER</span><span>⚡ GASLESS APPROVALS</span>
-    <span>🎀 CUTE BY DESIGN</span><span>💀 RUTHLESS BY MECHANICS</span>
-    <span>🚀 ETHEREUM MAINNET</span><span>🔒 OPENZEPPELIN AUDITED</span>
-    <span>🪆 $BDOLL</span><span>🔥 BURN TO EARN SCARCITY</span>
-    <span>💎 10B MAX SUPPLY — FOREVER</span><span>⚡ GASLESS APPROVALS</span>
-    <span>🎀 CUTE BY DESIGN</span><span>💀 RUTHLESS BY MECHANICS</span>
-    <span>🚀 ETHEREUM MAINNET</span><span>🔒 OPENZEPPELIN AUDITED</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-doll"/></svg> $BDOLL</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-flame"/></svg> BURN TO EARN SCARCITY</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-lock"/></svg> 10B MAX SUPPLY — FOREVER</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-zap"/></svg> GASLESS APPROVALS</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-shield"/></svg> OPENZEPPELIN AUDITED</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-trending-down"/></svg> DEFLATIONARY BY DESIGN</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-rocket"/></svg> ETHEREUM MAINNET</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-coins"/></svg> FAIR LAUNCH</span>
+    <!-- duplicate for seamless loop -->
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-doll"/></svg> $BDOLL</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-flame"/></svg> BURN TO EARN SCARCITY</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-lock"/></svg> 10B MAX SUPPLY — FOREVER</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-zap"/></svg> GASLESS APPROVALS</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-shield"/></svg> OPENZEPPELIN AUDITED</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-trending-down"/></svg> DEFLATIONARY BY DESIGN</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-rocket"/></svg> ETHEREUM MAINNET</span>
+    <span><svg width="13" height="13" class="ic-inline"><use href="#ic-coins"/></svg> FAIR LAUNCH</span>
   </div>
 </div>
 
@@ -113,56 +322,64 @@
   <div class="container">
     <div class="section-tag">The Honest Answer</div>
     <h2 class="section-title">Why Would Anyone Buy <span class="grad-text">$BDOLL?</span></h2>
-    <p class="section-lead">
-      Good question. Let's be real — most meme coins are worthless. Here's what makes $BDOLL different.
-    </p>
+    <p class="section-lead">Good question. Let's be real — most meme coins are worthless. Here's what makes $BDOLL different.</p>
 
     <div class="why-grid">
       <div class="why-card big">
         <div class="why-num">01</div>
-        <div class="why-icon">🔥</div>
-        <h3>The Supply Only Goes Down</h3>
-        <p>Every holder who burns $BDOLL reduces the total supply permanently. The contract enforces it on-chain — no one can reverse a burn. As more people burn, the remaining tokens become mathematically scarcer. Scarcity drives price. This isn't hopium — it's supply and demand.</p>
-        <div class="why-proof">
-          <span>📉 Supply decreases</span>
-          <span>→</span>
-          <span>📊 Scarcity increases</span>
-          <span>→</span>
-          <span>💰 Your bag is worth more</span>
+        <div class="why-icon-wrap">
+          <svg width="32" height="32" class="why-icon"><use href="#ic-flame"/></svg>
+        </div>
+        <div class="why-body">
+          <h3>The Supply Only Goes Down</h3>
+          <p>Every holder who burns $BDOLL reduces the total supply permanently. The contract enforces it on-chain — no one can reverse a burn. As more people burn, the remaining tokens become mathematically scarcer. Scarcity drives price. This isn't hopium — it's supply and demand.</p>
+          <div class="why-proof">
+            <span class="proof-item">
+              <svg width="16" height="16"><use href="#ic-trending-down"/></svg> Supply decreases
+            </span>
+            <span class="proof-arrow">→</span>
+            <span class="proof-item">
+              <svg width="16" height="16"><use href="#ic-bar-chart"/></svg> Scarcity increases
+            </span>
+            <span class="proof-arrow">→</span>
+            <span class="proof-item">
+              <svg width="16" height="16"><use href="#ic-coins"/></svg> Your bag is worth more
+            </span>
+          </div>
         </div>
       </div>
 
       <div class="why-card">
         <div class="why-num">02</div>
-        <div class="why-icon">🔒</div>
+        <svg width="28" height="28" class="why-icon"><use href="#ic-lock"/></svg>
         <h3>Hard Cap. No Exceptions.</h3>
         <p>Max supply is 10,000,000,000 $BDOLL. That ceiling is written in the smart contract. Not a promise — code. Even the owner cannot print past it.</p>
       </div>
 
       <div class="why-card">
         <div class="why-num">03</div>
-        <div class="why-icon">⏰</div>
+        <svg width="28" height="28" class="why-icon"><use href="#ic-clock"/></svg>
         <h3>You're Buying Before the Chart Exists</h3>
         <p>Right now $BDOLL has no price. Pre-sale supporters are getting in before Uniswap, before a price chart, before the community goes viral. The earliest bags are always the biggest wins.</p>
       </div>
 
       <div class="why-card">
         <div class="why-num">04</div>
-        <div class="why-icon">🌊</div>
+        <svg width="28" height="28" class="why-icon"><use href="#ic-trending-up"/></svg>
         <h3>Meme Culture is a Real Market</h3>
         <p>DOGE started as a joke. SHIB started as a joke. PEPE started as a joke. The crypto market rewards community energy — and BabyDoll's aesthetic is built for the moment.</p>
       </div>
 
       <div class="why-card">
         <div class="why-num">05</div>
-        <div class="why-icon">🛡️</div>
+        <svg width="28" height="28" class="why-icon"><use href="#ic-shield"/></svg>
         <h3>Open Code, No Surprises</h3>
         <p>The contract is public, verified on Etherscan, and built with OpenZeppelin v5. No hidden mint functions. No honeypot. Read every line before you buy.</p>
       </div>
 
       <div class="why-card">
         <div class="why-num">06</div>
-        <div class="why-icon">⚡</div>
+        <svg width="28" height="28" class="why-icon"><use href="#ic-zap"/></svg>
         <h3>Gasless Trades with Permit</h3>
         <p>EIP-2612 support means you can approve token spending with just a signature — no separate approve transaction. Lower friction = more traders = more volume.</p>
       </div>
@@ -174,41 +391,40 @@
 <section class="section burn-section" id="burn">
   <div class="burn-bg"></div>
   <div class="container">
-    <div class="section-tag center">🔥 The Core Mechanic</div>
+    <div class="section-tag center">
+      <svg width="13" height="13" class="ic-inline"><use href="#ic-flame"/></svg> The Core Mechanic
+    </div>
     <h2 class="section-title center">Burning is <span class="grad-text">the Point</span></h2>
-    <p class="section-lead center">
-      Most tokens inflate forever. $BDOLL is designed to do the opposite.
-      Every burn is permanent, public, and on-chain.
-    </p>
+    <p class="section-lead center">Most tokens inflate forever. $BDOLL is designed to do the opposite. Every burn is permanent, public, and on-chain.</p>
 
     <div class="burn-flow">
       <div class="burn-step">
-        <div class="burn-step-icon">👛</div>
+        <div class="burn-step-icon"><svg width="32" height="32"><use href="#ic-wallet"/></svg></div>
         <div class="burn-step-title">You hold $BDOLL</div>
         <p>Buy on Uniswap. Store in any Ethereum wallet. Standard ERC-20 — MetaMask, Ledger, all work.</p>
       </div>
       <div class="burn-arrow">→</div>
       <div class="burn-step">
-        <div class="burn-step-icon">🔥</div>
+        <div class="burn-step-icon"><svg width="32" height="32"><use href="#ic-flame"/></svg></div>
         <div class="burn-step-title">You burn your tokens</div>
         <p>Call the burn function. Those tokens are sent to address 0x0 — a black hole. They are gone forever. Total supply drops by exactly that amount.</p>
       </div>
       <div class="burn-arrow">→</div>
       <div class="burn-step">
-        <div class="burn-step-icon">📉</div>
+        <div class="burn-step-icon"><svg width="32" height="32"><use href="#ic-trending-down"/></svg></div>
         <div class="burn-step-title">Supply shrinks permanently</div>
         <p>The blockchain records it. Etherscan shows it. Everyone can verify the supply dropped. This is not a promise — it is on-chain math.</p>
       </div>
       <div class="burn-arrow">→</div>
       <div class="burn-step highlight-step">
-        <div class="burn-step-icon">💰</div>
+        <div class="burn-step-icon"><svg width="32" height="32"><use href="#ic-coins"/></svg></div>
         <div class="burn-step-title">Your remaining bag is scarcer</div>
         <p>Same demand spread across fewer tokens. Each $BDOLL you hold now represents a larger share of total supply. Scarcity is value.</p>
       </div>
     </div>
 
     <div class="burn-callout">
-      <div class="bc-icon">💀</div>
+      <div class="bc-icon"><svg width="36" height="36"><use href="#ic-skull"/></svg></div>
       <div class="bc-text">
         <strong>Why would anyone burn their own tokens?</strong>
         <p>Community burn events. Holder challenges. Token ceremonies. When a community collectively burns supply, everyone who keeps their tokens benefits. It's a coordination game — and coordination creates culture.</p>
@@ -243,9 +459,7 @@
 
     <div class="toki-split">
       <div class="toki-table">
-        <div class="toki-row header">
-          <span>Property</span><span>Value</span>
-        </div>
+        <div class="toki-row header"><span>Property</span><span>Value</span></div>
         <div class="toki-row"><span>Name</span><strong>BabyDoll</strong></div>
         <div class="toki-row"><span>Ticker</span><strong>$BDOLL</strong></div>
         <div class="toki-row"><span>Network</span><strong>Ethereum</strong></div>
@@ -253,19 +467,23 @@
         <div class="toki-row"><span>Decimals</span><strong>18</strong></div>
         <div class="toki-row"><span>Initial Supply</span><strong>1,000,000,000</strong></div>
         <div class="toki-row accent"><span>Max Supply (Hard Cap)</span><strong>10,000,000,000</strong></div>
-        <div class="toki-row"><span>Burn</span><strong>✅ Any holder, anytime</strong></div>
+        <div class="toki-row">
+          <span>Burn</span>
+          <strong class="val-yes"><svg width="14" height="14" class="ic-inline"><use href="#ic-check-circle"/></svg> Any holder, anytime</strong>
+        </div>
         <div class="toki-row"><span>Mint</span><strong>Owner only, up to hard cap</strong></div>
-        <div class="toki-row"><span>Gasless Approve</span><strong>✅ EIP-2612 Permit</strong></div>
+        <div class="toki-row">
+          <span>Gasless Approve</span>
+          <strong class="val-yes"><svg width="14" height="14" class="ic-inline"><use href="#ic-check-circle"/></svg> EIP-2612 Permit</strong>
+        </div>
       </div>
 
       <div class="toki-visual">
         <div class="donut-wrap">
           <svg viewBox="0 0 200 200" class="donut-svg" aria-label="Supply breakdown chart">
             <circle cx="100" cy="100" r="75" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="28"/>
-            <!-- Initial supply 10% -->
             <circle cx="100" cy="100" r="75" fill="none" stroke="url(#grad1)" stroke-width="28"
               stroke-dasharray="47.1 424.0" stroke-dashoffset="117.8" stroke-linecap="round"/>
-            <!-- Community/future 90% -->
             <circle cx="100" cy="100" r="75" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="28"
               stroke-dasharray="424.0 47.1" stroke-dashoffset="164.9" stroke-linecap="round"/>
             <defs>
@@ -281,26 +499,29 @@
         <div class="donut-legend">
           <div class="leg-item"><span class="leg-dot pink"></span>Initial mint — 1B BDOLL (10%)</div>
           <div class="leg-item"><span class="leg-dot dim"></span>Remaining mintable — 9B (90%)</div>
-          <div class="leg-note">🔥 Burns reduce both figures permanently</div>
+          <div class="leg-note">
+            <svg width="13" height="13" class="ic-inline"><use href="#ic-flame"/></svg>
+            Burns reduce both figures permanently
+          </div>
         </div>
       </div>
     </div>
 
     <div class="no-bs-row">
       <div class="no-bs-item">
-        <span class="no-bs-x">✗</span>
+        <svg width="16" height="16" class="no-bs-x"><use href="#ic-alert"/></svg>
         <span>No VC dump allocation</span>
       </div>
       <div class="no-bs-item">
-        <span class="no-bs-x">✗</span>
+        <svg width="16" height="16" class="no-bs-x"><use href="#ic-alert"/></svg>
         <span>No hidden tax on transfers</span>
       </div>
       <div class="no-bs-item">
-        <span class="no-bs-x">✗</span>
+        <svg width="16" height="16" class="no-bs-x"><use href="#ic-alert"/></svg>
         <span>No blacklist function</span>
       </div>
       <div class="no-bs-item">
-        <span class="no-bs-x">✗</span>
+        <svg width="16" height="16" class="no-bs-x"><use href="#ic-alert"/></svg>
         <span>No honeypot mechanics</span>
       </div>
     </div>
@@ -311,7 +532,9 @@
 <section class="section presale" id="presale">
   <div class="presale-glow"></div>
   <div class="container">
-    <div class="section-tag center">🪆 Limited Window</div>
+    <div class="section-tag center">
+      <svg width="12" height="12" class="ic-inline"><use href="#ic-clock"/></svg> Limited Window
+    </div>
     <h2 class="section-title center">She's Not Awake Yet.<br/><span class="grad-text">Get In Before She Is.</span></h2>
     <p class="section-lead center">
       It costs ~$100 in gas to deploy BabyDoll to Ethereum mainnet.
@@ -320,59 +543,80 @@
     </p>
 
     <div class="presale-grid">
-
       <div class="presale-card">
         <div class="presale-card-header">
-          <div class="presale-badge">🔥 Founding Supporter</div>
+          <div class="presale-badge">
+            <svg width="12" height="12" class="ic-inline"><use href="#ic-flame"/></svg> Founding Supporter
+          </div>
           <div class="presale-amount">$100</div>
           <div class="presale-amount-note">covers the entire deployment gas cost</div>
         </div>
         <div class="presale-perks">
-          <div class="perk"><span class="perk-icon">🎁</span><div><strong>Bonus $BDOLL at launch</strong><small>Allocated before the contract opens to the public</small></div></div>
-          <div class="perk"><span class="perk-icon">🏆</span><div><strong>Founding Supporter status</strong><small>Permanently recorded on-chain and in our community</small></div></div>
-          <div class="perk"><span class="perk-icon">📢</span><div><strong>Listed as a launch backer</strong><small>Your wallet address in the Hall of Founders</small></div></div>
-          <div class="perk"><span class="perk-icon">⚡</span><div><strong>First to know when she goes live</strong><small>Contract address, Uniswap link, everything — you first</small></div></div>
-          <div class="perk"><span class="perk-icon">🗳️</span><div><strong>Early governance voice</strong><small>Input on burn events, listings, and community decisions</small></div></div>
+          <div class="perk">
+            <span class="perk-icon"><svg width="22" height="22"><use href="#ic-gift"/></svg></span>
+            <div><strong>Bonus $BDOLL at launch</strong><small>Allocated before the contract opens to the public</small></div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon"><svg width="22" height="22"><use href="#ic-trophy"/></svg></span>
+            <div><strong>Founding Supporter status</strong><small>Permanently recorded on-chain and in our community</small></div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon"><svg width="22" height="22"><use href="#ic-megaphone"/></svg></span>
+            <div><strong>Listed as a launch backer</strong><small>Your wallet address in the Hall of Founders</small></div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon"><svg width="22" height="22"><use href="#ic-zap"/></svg></span>
+            <div><strong>First to know when she goes live</strong><small>Contract address, Uniswap link, everything — you first</small></div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon"><svg width="22" height="22"><use href="#ic-vote"/></svg></span>
+            <div><strong>Early governance voice</strong><small>Input on burn events, listings, and community decisions</small></div>
+          </div>
         </div>
         <a href="mailto:hello@babydollcoin.io?subject=BDOLL%20Pre-Sale%20Support" class="btn btn-primary full-btn">
-          💌 Contact to Participate
+          <svg width="16" height="16"><use href="#ic-mail"/></svg> Contact to Participate
         </a>
         <p class="presale-small">Reach out via email or Telegram. No middlemen. Direct line to the team.</p>
       </div>
 
       <div class="presale-side">
         <div class="timeline-card">
-          <h3>🗓️ What Happens Next</h3>
+          <h3>
+            <svg width="16" height="16" class="ic-inline" style="color:var(--pink-soft)"><use href="#ic-calendar"/></svg>
+            What Happens Next
+          </h3>
           <div class="timeline">
             <div class="tl-item done">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-check-circle"/></svg></div>
               <div><strong>Contract written &amp; tested</strong><small>20/20 tests passing on Hardhat</small></div>
             </div>
             <div class="tl-item done">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-check-circle"/></svg></div>
               <div><strong>OpenZeppelin security review</strong><small>Built entirely on audited v5 libraries</small></div>
             </div>
             <div class="tl-item active">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-flame"/></svg></div>
               <div><strong>Deployment fund raised</strong><small>← You are here. $100 gets us to mainnet.</small></div>
             </div>
             <div class="tl-item">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-circle"/></svg></div>
               <div><strong>Mainnet deployment</strong><small>Contract goes live. Bonus BDOLL sent to supporters.</small></div>
             </div>
             <div class="tl-item">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-circle"/></svg></div>
               <div><strong>Etherscan verification</strong><small>Source code public and verified.</small></div>
             </div>
             <div class="tl-item">
-              <div class="tl-dot"></div>
+              <div class="tl-dot"><svg width="11" height="11"><use href="#ic-circle"/></svg></div>
               <div><strong>Uniswap liquidity added</strong><small>BDOLL/ETH pair. Publicly tradeable.</small></div>
             </div>
           </div>
         </div>
 
         <div class="countdown-card">
-          <div class="cd-label">⏳ Pre-Sale Window</div>
+          <div class="cd-label">
+            <svg width="14" height="14" class="ic-inline"><use href="#ic-timer"/></svg> Pre-Sale Window
+          </div>
           <div class="cd-boxes">
             <div class="cd-unit"><span id="cd-days">--</span><small>Days</small></div>
             <div class="cd-col">:</div>
@@ -384,7 +628,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -398,16 +641,50 @@
       <div class="ct-header">
         <span></span>
         <span>Random Meme Coin</span>
-        <span class="ct-bdoll">$BDOLL 🪆</span>
+        <span class="ct-bdoll">
+          $BDOLL <svg width="14" height="14" class="ic-inline" style="color:var(--pink-soft)"><use href="#ic-doll"/></svg>
+        </span>
       </div>
-      <div class="ct-row"><span>Supply hard cap</span><span class="no">❌ Usually inflationary</span><span class="yes">✅ 10B forever</span></div>
-      <div class="ct-row"><span>Burn mechanic</span><span class="no">❌ Rarely enforced</span><span class="yes">✅ On-chain, permanent</span></div>
-      <div class="ct-row"><span>Audited code</span><span class="no">❌ Often unverified</span><span class="yes">✅ OpenZeppelin v5</span></div>
-      <div class="ct-row"><span>Gasless approvals</span><span class="no">❌ Extra gas required</span><span class="yes">✅ EIP-2612 Permit</span></div>
-      <div class="ct-row"><span>Transparent source</span><span class="no">❌ Hidden / obfuscated</span><span class="yes">✅ Verified Etherscan</span></div>
-      <div class="ct-row"><span>Hidden transfer tax</span><span class="no">⚠️ Often 5–20% tax</span><span class="yes">✅ Zero tax</span></div>
-      <div class="ct-row"><span>Blacklist function</span><span class="no">⚠️ Many have it</span><span class="yes">✅ Does not exist</span></div>
-      <div class="ct-row"><span>Pre-sale dumps</span><span class="no">⚠️ Typical</span><span class="yes">✅ Fair launch</span></div>
+      <div class="ct-row">
+        <span>Supply hard cap</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Usually inflationary</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> 10B forever</span>
+      </div>
+      <div class="ct-row">
+        <span>Burn mechanic</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Rarely enforced</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> On-chain, permanent</span>
+      </div>
+      <div class="ct-row">
+        <span>Audited code</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Often unverified</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> OpenZeppelin v5</span>
+      </div>
+      <div class="ct-row">
+        <span>Gasless approvals</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Extra gas required</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> EIP-2612 Permit</span>
+      </div>
+      <div class="ct-row">
+        <span>Transparent source</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Hidden / obfuscated</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> Verified Etherscan</span>
+      </div>
+      <div class="ct-row">
+        <span>Hidden transfer tax</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Often 5–20% tax</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> Zero tax</span>
+      </div>
+      <div class="ct-row">
+        <span>Blacklist function</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Many have it</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> Does not exist</span>
+      </div>
+      <div class="ct-row">
+        <span>Pre-sale dumps</span>
+        <span class="no"><svg width="13" height="13" class="ic-no"><use href="#ic-alert"/></svg> Typical</span>
+        <span class="yes"><svg width="13" height="13" class="ic-yes"><use href="#ic-check-circle"/></svg> Fair launch</span>
+      </div>
     </div>
   </div>
 </section>
@@ -418,59 +695,64 @@
     <div class="section-tag center">The Plan</div>
     <h2 class="section-title center">From Doll to <span class="grad-text">Dynasty</span></h2>
     <div class="road-list">
+
       <div class="road-item active">
         <div class="road-marker"><span>1</span></div>
         <div class="road-body">
           <div class="road-phase">Phase 1 — Birth <span class="road-status live">In Progress</span></div>
           <h3>She Wakes Up</h3>
           <ul>
-            <li>✅ Smart contract built &amp; audited</li>
-            <li>✅ 20/20 tests passing</li>
-            <li>🔄 Deployment fund ($100 goal)</li>
-            <li>⬜ Ethereum mainnet launch</li>
-            <li>⬜ Etherscan verification</li>
+            <li><span class="rm-done"><svg width="14" height="14"><use href="#ic-check-circle"/></svg></span> Smart contract built &amp; audited</li>
+            <li><span class="rm-done"><svg width="14" height="14"><use href="#ic-check-circle"/></svg></span> 20/20 tests passing</li>
+            <li><span class="rm-active"><svg width="14" height="14"><use href="#ic-loader"/></svg></span> Deployment fund ($100 goal)</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Ethereum mainnet launch</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Etherscan verification</li>
           </ul>
         </div>
       </div>
+
       <div class="road-item">
         <div class="road-marker"><span>2</span></div>
         <div class="road-body">
           <div class="road-phase">Phase 2 — Trading</div>
           <h3>She Hits the Market</h3>
           <ul>
-            <li>⬜ Uniswap v3 BDOLL/ETH pair</li>
-            <li>⬜ CoinGecko &amp; CoinMarketCap listing</li>
-            <li>⬜ MetaMask import guide published</li>
-            <li>⬜ First community burn event</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Uniswap v3 BDOLL/ETH pair</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> CoinGecko &amp; CoinMarketCap listing</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> MetaMask import guide published</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> First community burn event</li>
           </ul>
         </div>
       </div>
+
       <div class="road-item">
         <div class="road-marker"><span>3</span></div>
         <div class="road-body">
           <div class="road-phase">Phase 3 — Community</div>
           <h3>She Goes Viral</h3>
           <ul>
-            <li>⬜ Twitter/X growth campaign</li>
-            <li>⬜ Telegram community launch</li>
-            <li>⬜ BabyDoll NFT collection drop</li>
-            <li>⬜ Influencer &amp; KOL partnerships</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Twitter/X growth campaign</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Telegram community launch</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> BabyDoll NFT collection drop</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Influencer &amp; KOL partnerships</li>
           </ul>
         </div>
       </div>
+
       <div class="road-item">
         <div class="road-marker"><span>4</span></div>
         <div class="road-body">
           <div class="road-phase">Phase 4 — Ecosystem</div>
           <h3>She Runs the Show</h3>
           <ul>
-            <li>⬜ CEX exchange listings</li>
-            <li>⬜ Staking rewards for long-term holders</li>
-            <li>⬜ Community DAO governance</li>
-            <li>⬜ Cross-chain bridge</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> CEX exchange listings</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Staking rewards for long-term holders</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Community DAO governance</li>
+            <li><span class="rm-pending"><svg width="14" height="14"><use href="#ic-circle"/></svg></span> Cross-chain bridge</li>
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -521,14 +803,23 @@
 <section class="final-cta">
   <div class="fcta-bg"></div>
   <div class="container fcta-inner">
-    <div class="doll-small">🪆</div>
+    <div class="doll-big">
+      <svg width="72" height="72" class="doll-svg"><use href="#ic-doll"/></svg>
+    </div>
     <h2>She's Not Awake Yet.</h2>
     <p>The pre-sale window is open. Founding supporters get bonus $BDOLL and first access the moment she launches on mainnet. One hundred dollars. Zero middlemen. All upside.</p>
     <div class="fcta-btns">
-      <a href="mailto:hello@babydollcoin.io?subject=BDOLL%20Pre-Sale" class="btn btn-primary large">🔥 Secure My Spot</a>
-      <a href="https://t.me/babydollcoin" class="btn btn-ghost large">💬 Join Telegram</a>
+      <a href="mailto:hello@babydollcoin.io?subject=BDOLL%20Pre-Sale" class="btn btn-primary large">
+        <svg width="18" height="18"><use href="#ic-flame"/></svg> Secure My Spot
+      </a>
+      <a href="https://t.me/babydollcoin" class="btn btn-ghost large">
+        <svg width="18" height="18"><use href="#ic-telegram"/></svg> Join Telegram
+      </a>
     </div>
-    <p class="fcta-disclaimer">⚠️ Crypto is volatile. This is not financial advice. Only invest what you can lose. DYOR.</p>
+    <p class="fcta-disclaimer">
+      <svg width="13" height="13" class="ic-inline" style="color:rgba(255,180,60,.6)"><use href="#ic-alert"/></svg>
+      Crypto is volatile. This is not financial advice. Only invest what you can lose. DYOR.
+    </p>
   </div>
 </section>
 
@@ -537,13 +828,25 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo"><span class="logo-doll">🪆</span><span class="logo-text">BabyDoll</span><span class="logo-ticker">$BDOLL</span></div>
+        <div class="logo">
+          <span class="logo-doll"><svg width="26" height="26"><use href="#ic-doll"/></svg></span>
+          <span class="logo-text">BabyDoll</span>
+          <span class="logo-ticker">$BDOLL</span>
+        </div>
         <p>The meme coin that gets rarer every day.<br/>Cute by design. Deflationary by nature.</p>
         <div class="socials">
-          <a href="https://twitter.com/babydollcoin" class="soc" aria-label="Twitter">𝕏</a>
-          <a href="https://t.me/babydollcoin" class="soc" aria-label="Telegram">✈</a>
-          <a href="https://discord.gg/babydoll" class="soc" aria-label="Discord">💬</a>
-          <a href="https://github.com/babydollcoin" class="soc" aria-label="GitHub">🐱</a>
+          <a href="https://twitter.com/babydollcoin" class="soc" aria-label="Twitter">
+            <svg width="16" height="16"><use href="#ic-twitter"/></svg>
+          </a>
+          <a href="https://t.me/babydollcoin" class="soc" aria-label="Telegram">
+            <svg width="16" height="16"><use href="#ic-telegram"/></svg>
+          </a>
+          <a href="https://discord.gg/babydoll" class="soc" aria-label="Discord">
+            <svg width="16" height="16"><use href="#ic-discord"/></svg>
+          </a>
+          <a href="https://github.com/pradumana/BabyDoll" class="soc" aria-label="GitHub">
+            <svg width="16" height="16"><use href="#ic-github"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
@@ -555,22 +858,27 @@
       </div>
       <div class="footer-col">
         <h4>Verify</h4>
-        <a href="#">Contract Source</a>
-        <a href="#">Etherscan</a>
-        <a href="#">Uniswap</a>
-        <a href="#">Whitepaper</a>
+        <a href="https://github.com/pradumana/BabyDoll">
+          Contract Source <svg width="11" height="11" class="ic-inline"><use href="#ic-external"/></svg>
+        </a>
+        <a href="#">Etherscan <svg width="11" height="11" class="ic-inline"><use href="#ic-external"/></svg></a>
+        <a href="#">Uniswap <svg width="11" height="11" class="ic-inline"><use href="#ic-external"/></svg></a>
+        <a href="#">Whitepaper <svg width="11" height="11" class="ic-inline"><use href="#ic-external"/></svg></a>
       </div>
       <div class="footer-col">
         <h4>Community</h4>
-        <a href="#">Telegram</a>
-        <a href="#">Twitter / X</a>
-        <a href="#">Discord</a>
-        <a href="#">GitHub</a>
+        <a href="https://t.me/babydollcoin">Telegram</a>
+        <a href="https://twitter.com/babydollcoin">Twitter / X</a>
+        <a href="https://discord.gg/babydoll">Discord</a>
+        <a href="https://github.com/pradumana/BabyDoll">GitHub</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 BabyDoll Token ($BDOLL). All rights reserved.</span>
-      <span class="footer-risk">Not financial advice. Crypto investments carry risk. DYOR.</span>
+      <span class="footer-risk">
+        <svg width="12" height="12" class="ic-inline" style="color:rgba(255,180,60,.5)"><use href="#ic-alert"/></svg>
+        Not financial advice. Crypto investments carry risk. DYOR.
+      </span>
     </div>
   </div>
 </footer>
