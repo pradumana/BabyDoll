@@ -1,0 +1,23 @@
+# Environment — never commit real keys
+.env
+
+# Hardhat build artifacts
+artifacts/
+cache/
+
+# Node modules
+node_modules/
+
+# Coverage reports
+coverage/
+coverage.json
+
+# Gas reporter output
+gasReporterOutput.json
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
