@@ -276,7 +276,43 @@ const CONFIG = {
 })();
 
 /* ─────────────────────────────────────────────────────────────
-   7. SMOOTH ANCHOR SCROLL — offset for fixed nav height
+   7. HAMBURGER MENU
+   ───────────────────────────────────────────────────────────── */
+(function initHamburger() {
+  const btn  = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    menu.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  btn.addEventListener('click', () => toggle(!btn.classList.contains('open')));
+
+  // Close on any menu link click
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => toggle(false));
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (btn.classList.contains('open') && !btn.contains(e.target) && !menu.contains(e.target)) {
+      toggle(false);
+    }
+  });
+
+  // Close on resize back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) toggle(false);
+  }, { passive: true });
+})();
+
+/* ─────────────────────────────────────────────────────────────
+   8. SMOOTH ANCHOR SCROLL — offset for fixed nav height
    ───────────────────────────────────────────────────────────── */
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -293,7 +329,7 @@ const CONFIG = {
 })();
 
 /* ─────────────────────────────────────────────────────────────
-   8. COPY CONTRACT ADDRESS (post-launch — wires up any
+   9. COPY CONTRACT ADDRESS (post-launch — wires up any
       element with data-copy="contract" once you add one)
    ───────────────────────────────────────────────────────────── */
 (function initCopyAddress() {
